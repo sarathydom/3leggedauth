@@ -18,9 +18,8 @@ class Default_Class {
     return fetch(url, {
       method: "post",
       body: JSON.stringify(body),
-      headers: { 'Content-Type: application/x-www-form-urlencoded' },
-    })
-      .then((res) => res.json())
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    }).then((res) => res.json());
   };
 }
 
