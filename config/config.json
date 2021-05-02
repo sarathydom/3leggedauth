@@ -3,7 +3,7 @@
   "viewEngiene": "ejs",
   "defaultTitle": "Website Grader",
   "MONGODBURL": "mongodb+srv://admin:2lxlRzX82u8m9QHn@cluster0.blimd.mongodb.net/clerisy?retryWrites=true&w=majority",
-  "LINKEDINCLIENTID": "869i88fjem05ei",
-  "LINKEDINSECRET": "TgXbjHrfsRQX3xIZ",
+  "LINKEDINCLIENTID": "86720herzmj54u",
+  "LINKEDINSECRET": "HrLCq2Cg5gNCB37Z",
   "LINKEDINCALLBACKURL": "http://localhost:3000/linkedinCallBack"
 }

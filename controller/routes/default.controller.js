@@ -1,10 +1,11 @@
 module.exports.defaultRoute = (req, res) => {
   if (req.params.token) {
-    res.send(res.params.token);
+    res.send(req.params.token);
     return;
   } else {
     res.send("ok");
   }
+  res.send("ok");
 };
 module.exports.linkedAuthUrl = (req, res) => {
   const commonutility = require("../../utility/common");
@@ -24,9 +25,14 @@ module.exports.linkedinCallBack = async (req, res) => {
   let DefaultClass = require("../../class/routes/default.class");
   const config = require("../../config/config.json");
   let defaultClass = new DefaultClass(req, res, config);
-  const authToken = req.query.access_token;
+  const authToken = req.query.code;
   let Url = defaultClass.getAccessTokenURL(authToken);
   const result = await defaultClass.sendRequestToGetAccessToken(Url);
-  let { access_token } = result;
+  console.log(result);
+  let { access_token, error, error_description } = result;
+  if (error) {
+    res.redirect(`/access/${error_description}`);
+    return;
+  }
   res.redirect(`/access/${access_token}`);
 };
