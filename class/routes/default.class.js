@@ -14,10 +14,8 @@ class Default_Class {
   };
   sendRequestToGetAccessToken = (url) => {
     const fetch = require("node-fetch");
-    const body = { a: 1 };
     return fetch(url, {
       method: "post",
-      body: JSON.stringify(body),
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
     }).then((res) => res.json());
   };

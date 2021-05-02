@@ -26,7 +26,7 @@ module.exports.linkedinCallBack = async (req, res) => {
   let defaultClass = new DefaultClass(req, res, config);
   const authToken = req.query.access_token;
   let Url = defaultClass.getAccessTokenURL(authToken);
-  const result = await defaultClass.sendRequestToGetAccessToken(authToken);
+  const result = await defaultClass.sendRequestToGetAccessToken(Url);
   let { access_token } = result;
   res.redirect(`/access/${access_token}`);
 };
