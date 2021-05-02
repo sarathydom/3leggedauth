@@ -1,0 +1,23 @@
+{
+  "name": "threelegedauth-linkedin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parthasarathy.P",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.7",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "underscore": "^1.13.1"
+  }
+}
